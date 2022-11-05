@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
-function App() {
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Header from "./layout/Header";
+import CryptoItemPage from "./views/CryptoItemPage";
+import CryptoListPage from "./views/CryptoListPage";
+
+import "./App.css";
+import { CurrenciesContextProvider } from "./context/CurrenciesContext";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CurrenciesContextProvider>
+        <HashRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<CryptoListPage />} />
+            <Route path="/details/:id" element={<CryptoItemPage />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
+          </Routes>
+        </HashRouter>
+      </CurrenciesContextProvider>
+    </>
   );
-}
+};
 
 export default App;
