@@ -25,6 +25,15 @@ const CryptoItemPage = () => {
             y: value[1].toFixed(2),
           }))
         );
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log("An error occurred:", error.response.status);
+        } else if (error.request) {
+          console.log("An error occurred:", error.request);
+        } else {
+          console.log("An error occurred:", error.message);
+        }
       });
 
     axios
@@ -36,6 +45,15 @@ const CryptoItemPage = () => {
       })
       .then((response) => {
         setCryptoItemData(response.data[0]);
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log("An error occurred:", error.response.status);
+        } else if (error.request) {
+          console.log("An error occurred:", error.request);
+        } else {
+          console.log("An error occurred:", error.message);
+        }
       });
   }, []);
 

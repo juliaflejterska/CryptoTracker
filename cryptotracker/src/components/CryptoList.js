@@ -24,6 +24,15 @@ const CryptoList = () => {
         })
         .then((response) => {
           setCryptoItems(response.data);
+        })
+        .catch((error) => {
+          if (error.response) {
+            console.log("An error occurred:", error.response.status);
+          } else if (error.request) {
+            console.log("An error occurred:", error.request);
+          } else {
+            console.log("An error occurred:", error.message);
+          }
         });
     }
   }, [storageCurrencies]);
