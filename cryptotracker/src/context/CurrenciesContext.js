@@ -13,7 +13,6 @@ export const CurrenciesContextProvider = (props) => {
   }, [storageCurrencies]);
 
   const chooseCurrency = (currency) => {
-    console.log(storageCurrencies.length);
     if (storageCurrencies.indexOf(currency) === -1) {
       setStorageCurrencies([...storageCurrencies, currency]);
     }

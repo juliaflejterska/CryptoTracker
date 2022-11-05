@@ -1,16 +1,10 @@
-import { useState } from "react";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import Header from "./layout/Header";
 import CryptoItemPage from "./views/CryptoItemPage";
 import CryptoListPage from "./views/CryptoListPage";
+import { CurrenciesContextProvider } from "./context/CurrenciesContext";
 
 import "./App.css";
-import { CurrenciesContextProvider } from "./context/CurrenciesContext";
 
 const App = () => {
   return (

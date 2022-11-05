@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
-import classes from "./CryptoItem.module.css";
-
 import randomColor from "randomcolor";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import classes from "./CryptoItem.module.css";
 
 const CryptoItem = ({ cryptoItem, deleteCurrency }) => {
+  const [randomColorPrice, setRandomColorPrice] = useState(randomColor());
+
   const onDeleteCurrency = () => {
     deleteCurrency(cryptoItem.id);
   };
-
-  const [randomColorPrice, setRandomColorPrice] = useState(randomColor());
-  console.log(randomColor);
 
   return (
     <li>
@@ -20,7 +19,10 @@ const CryptoItem = ({ cryptoItem, deleteCurrency }) => {
             <img className={classes.crypto_item_image} src={cryptoItem.image} />
           </div>
 
-          <div className={classes.crypto_item_overlay}>
+          <div
+            className={classes.crypto_item_overlay}
+            style={{ border: randomColorPrice }}
+          >
             <div className={classes.crypto_item_header}>
               <div className={classes.crypto_item_header_text}>
                 <div className={classes.crypto_item_header_name}>

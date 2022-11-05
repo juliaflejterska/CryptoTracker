@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { Line } from "react-chartjs-2";
 import "chart.js/auto";
-
 import moment from "moment";
 
 const CryptoItemChart = ({ cryptoItemDayPrices, cryptoItemData }) => {
