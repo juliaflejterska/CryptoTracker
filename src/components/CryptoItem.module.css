@@ -1,0 +1,87 @@
+.crypto_item {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.crypto_item_image_container {
+  height: auto;
+  margin-bottom: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.crypto_item_image {
+  width: 50%;
+}
+
+.crypto_item_overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: 40px;
+  background-color: white;
+  transform: translateY(100%);
+  transition: 0.2s ease-in-out;
+}
+
+.crypto_item:hover .crypto_item_overlay {
+  transform: translateY(0);
+}
+
+.crypto_item_header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: 40px 0 0 0;
+  background-color: white;
+  transform: translateY(-100%);
+  transition: 0.2s ease-in-out;
+}
+
+.crypto_item:hover .crypto_item_header {
+  transform: translateY(0);
+}
+
+.crypto_item_header_name {
+  font-size: 1em;
+  margin: 0 0 0.3em;
+  color: black;
+}
+
+.crypto_item_header_current_price {
+  font-size: 0.8em;
+  color: #ff6384;
+}
+
+.crypto_item_price_change_percentage_24h {
+  padding: 0 2em 2em;
+  margin: 0;
+  font-size: 1em;
+  color: black;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.crypto_item_price_change_percentage_24h_positive {
+  color: #00b200;
+}
+
+.crypto_item_price_change_percentage_24h_negative {
+  color: #ff0000;
+}
+
+.crypto_item_delete_button {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
