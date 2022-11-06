@@ -6,11 +6,9 @@ import { CurrenciesContext } from "../context/CurrenciesContext";
 import classes from "./ChooseCrypto.module.css";
 
 const ChooseCrypto = () => {
-  const { chooseCurrency } = useContext(CurrenciesContext);
+  const { chooseCurrency, storageCurrencies } = useContext(CurrenciesContext);
   const [availableCurrencies, setAvailableCurrencies] = useState([]);
   const [buttonIsClicked, setButtonIsClicked] = useState(false);
-
-  const { storageCurrencies } = useContext(CurrenciesContext);
   const [toMuchCurrencies, setTooMuchCurrencies] = useState(false);
 
   useEffect(() => {

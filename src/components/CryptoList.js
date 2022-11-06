@@ -8,7 +8,6 @@ import classes from "./CryptoList.module.css";
 
 const CryptoList = () => {
   const [cryptoItems, setCryptoItems] = useState([]);
-
   const { storageCurrencies, deleteCurrency } = useContext(CurrenciesContext);
 
   useEffect(() => {

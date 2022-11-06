@@ -6,7 +6,6 @@ import { BASE_URL } from "../constans/constans";
 
 const CryptoItemPage = () => {
   const { id } = useParams();
-
   const [cryptoItemDayPrices, setCryptoItemDayPrices] = useState([]);
   const [cryptoItemData, setCryptoItemData] = useState("");
 
