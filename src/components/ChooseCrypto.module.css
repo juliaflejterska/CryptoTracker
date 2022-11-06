@@ -74,7 +74,8 @@
 
 @media screen and (max-width: 650px) {
   .choose_crypto_button {
-    font-size: 12px;
+    padding: 3px 8px;
+    font-size: 10px;
   }
 
   .choose_crypto_alert {

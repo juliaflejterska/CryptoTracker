@@ -85,3 +85,17 @@
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width: 650px) {
+  .crypto_item_image_container {
+    margin-bottom: 200px;
+  }
+
+  .crypto_item_header {
+    transform: translateY(0);
+  }
+
+  .crypto_item_overlay {
+    transform: translateY(0);
+  }
+}
