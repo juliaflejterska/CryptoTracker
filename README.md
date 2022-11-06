@@ -4,7 +4,7 @@
 
 ---
 
-React application used for <b> cryptocurrency tracking </b>.
+React application used for <b> cryptocurrency tracking. </b>
 
 ---
 
