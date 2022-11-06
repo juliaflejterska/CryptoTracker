@@ -14,6 +14,6 @@ CryptoTracker allows you to <b>select up to 5 currencies from CoinGecko API</b> 
 
 After clicking on item, you can see its<b> 24h price chart</b> along with the current price in PLN. 
 
--- 
+--- 
 
 Selected currencies are saved in<b> LocalStorage</b> so as not to lose it after refreshing the page or turning off your device. Of course, you can delete them as well and choose another ones.
