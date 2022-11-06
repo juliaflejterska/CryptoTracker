@@ -22,7 +22,7 @@ const CryptoList = () => {
         .get(`${BASE_URL}/coins/markets`, {
           params: {
             vs_currency: "pln",
-            ids: storageCurrencies.join(","),
+            ids: storageCurrencies.join(", "),
           },
         })
         .then((response) => {

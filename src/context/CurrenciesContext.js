@@ -10,6 +10,9 @@ export const CurrenciesContextProvider = (props) => {
 
   useEffect(() => {
     localStorage.setItem("storageCurrencies", storageCurrencies);
+    if (localStorage.getItem("storageCurrencies") == "") {
+      localStorage.removeItem("storageCurrencies");
+    }
   }, [storageCurrencies]);
 
   const chooseCurrency = (currency) => {
