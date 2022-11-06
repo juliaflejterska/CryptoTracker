@@ -11,7 +11,11 @@ const CryptoList = () => {
   const { storageCurrencies, deleteCurrency } = useContext(CurrenciesContext);
 
   useEffect(() => {
-    if (storageCurrencies.length < 1) {
+    if (
+      storageCurrencies.length < 1 ||
+      storageCurrencies == "" ||
+      !storageCurrencies
+    ) {
       setCryptoItems([]);
     } else {
       axios
