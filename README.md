@@ -4,7 +4,7 @@
 
 ---
 
-React application used for <b> cryptocurrency tracking </b>.
+React application used for <b> cryptocurrency tracking. </b>
 
 ---
 
@@ -16,4 +16,4 @@ After clicking on item, you can see its<b> 24h price chart</b> along with the cu
 
 --- 
 
-Selected currencies are saved in<b> LocalStorage</b> so as not to lose it after refreshing the page or turning off your device. Of course, you can delete them as well and choose another ones.
+Selected currencies are saved in<b> LocalStorage</b> so as not to lose it after refreshing the page or turning off your device. Of course, you can <b>delete them </b>as well and choose another ones.
