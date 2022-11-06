@@ -4,14 +4,18 @@ import "chart.js/auto";
 import moment from "moment";
 
 const CryptoItemChart = ({ cryptoItemDayPrices, cryptoItemData }) => {
-  const ref = useRef();
+  const cryptoItemChartRef = useRef();
 
   const data = {
-    labels: cryptoItemDayPrices.map((value) => moment(value.x).format("LT")),
+    labels: cryptoItemDayPrices.map((cryptoItemDayPrice) =>
+      moment(cryptoItemDayPrice.x).format("LT")
+    ),
     datasets: [
       {
         label: `price of ${cryptoItemData.name} (PLN)`,
-        data: cryptoItemDayPrices.map((value) => value.y),
+        data: cryptoItemDayPrices.map(
+          (cryptoItemDayPrice) => cryptoItemDayPrice.y
+        ),
         fill: true,
         backgroundColor: "#ff6384",
         borderColor: "#ff6384",
@@ -25,7 +29,7 @@ const CryptoItemChart = ({ cryptoItemDayPrices, cryptoItemData }) => {
 
   return (
     <div>
-      <Line ref={ref} data={data} options={options} />
+      <Line ref={cryptoItemChartRef} data={data} options={options} />
     </div>
   );
 };
