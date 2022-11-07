@@ -7,6 +7,7 @@ const Header = () => {
         <img
           className={classes.header_img}
           src="../img/crypto_tracker_logo.png"
+          alt="CryptoTracker logo"
         />
       </a>
     </div>

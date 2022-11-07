@@ -16,7 +16,11 @@ const CryptoItem = ({ cryptoItem, deleteCurrency }) => {
       <Link to={`/details/${cryptoItem.id}`}>
         <div className={classes.crypto_item}>
           <div className={classes.crypto_item_image_container}>
-            <img className={classes.crypto_item_image} src={cryptoItem.image} />
+            <img
+              className={classes.crypto_item_image}
+              src={cryptoItem.image}
+              alt="currency logo"
+            />
           </div>
 
           <div
@@ -63,7 +67,11 @@ const CryptoItem = ({ cryptoItem, deleteCurrency }) => {
         className={classes.crypto_item_delete_button}
         onClick={onDeleteCurrency}
       >
-        <img width={30} src="../../img/crypto_tracker_delete.svg" />
+        <img
+          width={30}
+          src="../../img/crypto_tracker_delete.svg"
+          alt="delete icon"
+        />
       </a>
     </li>
   );

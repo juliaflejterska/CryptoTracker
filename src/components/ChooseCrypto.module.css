@@ -14,6 +14,11 @@
 
 .choose_crypto_info {
   margin: 15px;
+  text-align: center;
+}
+
+.choose_crypto_info_highlighted {
+  color: #ff6384;
 }
 
 .choose_crypto_alert {
@@ -69,7 +74,7 @@
 }
 
 .show_currencies_button:hover {
-  background-color: #fafbfc;
+  background-color: #ee5979;
 }
 
 @media screen and (max-width: 650px) {

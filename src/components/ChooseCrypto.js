@@ -59,14 +59,27 @@ const ChooseCrypto = () => {
         <>
           {toMuchCurrencies && (
             <div className={classes.choose_crypto_alert}>
-              <img width={50} src="../../img/crypto_tracker_alert.svg" />
+              <img
+                width={50}
+                src="../../img/crypto_tracker_alert.svg"
+                alt="alert icon"
+              />
               <span>
                 You cannot choose more than 5 cryptocurrencies at the same time.
                 Delete unnecessary items and try again.
               </span>
             </div>
           )}
-          <span className={classes.choose_crypto_info}>Choose up to 5.</span>
+          <span className={classes.choose_crypto_info}>
+            Choose{" "}
+            <span className={classes.choose_crypto_info_highlighted}>
+              up to 5.
+            </span>{" "}
+            Selected currencies will appear{" "}
+            <span className={classes.choose_crypto_info_highlighted}>
+              below.
+            </span>
+          </span>
           <ul className={classes.choose_crypto_list}>
             {availableCurrencies.map((availableCurrency) => {
               return (
@@ -81,9 +94,13 @@ const ChooseCrypto = () => {
               );
             })}
           </ul>
-          <a onClick={onShowCurrencies}>
-            <img width={50} src="../../img/crypto_tracker_up.svg" />
-          </a>
+          <button onClick={onShowCurrencies}>
+            <img
+              width={50}
+              src="../../img/crypto_tracker_up.svg"
+              alt="upper arrow icon"
+            />
+          </button>
         </>
       )}
     </div>
