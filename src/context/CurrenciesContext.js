@@ -8,6 +8,8 @@ export const CurrenciesContextProvider = (props) => {
     localStorage.getItem("storageCurrencies")?.split(",") || DUMMY_CURRENCIES
   );
 
+  const [selectedCurrency, setSelectedCurrency] = useState("");
+
   useEffect(() => {
     localStorage.setItem("storageCurrencies", storageCurrencies);
     if (localStorage.getItem("storageCurrencies") == "") {
@@ -18,6 +20,7 @@ export const CurrenciesContextProvider = (props) => {
   const chooseCurrency = (currency) => {
     if (storageCurrencies.indexOf(currency) === -1) {
       setStorageCurrencies([...storageCurrencies, currency]);
+      setSelectedCurrency(currency);
     }
   };
 
@@ -31,7 +34,12 @@ export const CurrenciesContextProvider = (props) => {
 
   return (
     <CurrenciesContext.Provider
-      value={{ storageCurrencies, chooseCurrency, deleteCurrency }}
+      value={{
+        storageCurrencies,
+        chooseCurrency,
+        deleteCurrency,
+        selectedCurrency,
+      }}
     >
       {props.children}
     </CurrenciesContext.Provider>

@@ -6,7 +6,8 @@ import { CurrenciesContext } from "../context/CurrenciesContext";
 import classes from "./ChooseCrypto.module.css";
 
 const ChooseCrypto = () => {
-  const { chooseCurrency, storageCurrencies } = useContext(CurrenciesContext);
+  const { chooseCurrency, storageCurrencies, selectedCurrency } =
+    useContext(CurrenciesContext);
   const [availableCurrencies, setAvailableCurrencies] = useState([]);
   const [buttonIsClicked, setButtonIsClicked] = useState(false);
   const [toMuchCurrencies, setTooMuchCurrencies] = useState(false);
@@ -85,6 +86,12 @@ const ChooseCrypto = () => {
               return (
                 <li key={availableCurrency.id}>
                   <button
+                    style={{
+                      backgroundColor:
+                        availableCurrency.id == selectedCurrency
+                          ? "#ff6384"
+                          : "white",
+                    }}
                     className={classes.choose_crypto_button}
                     onClick={() => onCurrencyChoose(availableCurrency.id)}
                   >
